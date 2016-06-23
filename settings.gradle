@@ -1,0 +1,2 @@
+include "gradle-example-api", "gradle-example-core", "gradle-example-war", "gradle-example-ear"
+

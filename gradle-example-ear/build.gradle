@@ -1,0 +1,16 @@
+apply plugin: 'ear'
+
+dependencies {
+//  deploy project(':gradle-example-war')
+    deploy project(path: ':gradle-example-war', configuration: 'archives')
+    earlib project(':gradle-example-core')
+    earlib project(':gradle-example-api')
+}
+
+ear {
+    deploymentDescriptor {
+//      webModule(project(':gradle-example-war').war.archiveName, 'gradle-example')
+        webModule(project(':gradle-example-war').name + '-' + project(':gradle-example-war').version + '.war', 'gradle-example')
+    }
+}
+
