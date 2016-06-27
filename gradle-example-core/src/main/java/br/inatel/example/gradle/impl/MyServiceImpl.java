@@ -9,4 +9,9 @@ public class MyServiceImpl implements MyService {
 		return "<h1>Hello " + name + "!!!</h1>";
 	}
 
+	@Override
+	public int sum(int a, int b) {
+		return a + b;
+	}
+
 }

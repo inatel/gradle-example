@@ -20,10 +20,24 @@ public class MyServiceImplTest {
 	@Test
 	public void shouldSayHello() {
 		// given
-		String expected = PREFIX + NAME + SUFFIX;
+		final String expected = PREFIX + NAME + SUFFIX;
 
 		// when
 		String result = myServiceImpl.sayHello(NAME);
+
+		// then
+		assertEquals(expected, result);
+	}
+
+	@Test
+	public void shouldSum() {
+		// given
+		final int first = 2;
+		final int second = 3;
+		final int expected = 5;
+
+		// when
+		int result = myServiceImpl.sum(first, second);
 
 		// then
 		assertEquals(expected, result);
