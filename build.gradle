@@ -4,8 +4,6 @@ plugins {
 
 sonarqube {
     properties {
-        property "sonar.host.url", "https://sonarqube.com"
-        property "sonar.login", "162f82d286fd5c9fda4c1a96ef9f9c7c21470d9c"
         property "sonar.sourceEncoding", "UTF-8"
         property "sonar.projectName", "Inatel Gradle Example"
         property "sonar.projectKey", "inatel_gradle-example"
@@ -16,6 +14,7 @@ subprojects {
 
     apply plugin: 'java'
     apply plugin: 'eclipse'
+    apply plugin: 'jacoco'
 
     configurations {
         provided
