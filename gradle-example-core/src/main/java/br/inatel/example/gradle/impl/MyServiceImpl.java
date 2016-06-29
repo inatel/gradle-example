@@ -16,7 +16,7 @@ public class MyServiceImpl implements MyService {
 	}
 
 	/**
-	 * @see MyService#sum(int, int)
+	 * @see MyService#sum(Integer, Integer)
 	 */
 	@Override
 	public Integer sum(Integer a, Integer b) {

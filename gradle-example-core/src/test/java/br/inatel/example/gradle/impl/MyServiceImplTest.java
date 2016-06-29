@@ -45,10 +45,36 @@ public class MyServiceImplTest {
 	}
 
 	@Test
-	public void shouldNotSumBecauseOfNullParam() {
+	public void shouldNotSumBecauseOfNullFirstParam() {
 		// given
 		final Integer first = null;
 		final Integer second = 3;
+
+		// when
+		Integer result = myServiceImpl.sum(first, second);
+
+		// then
+		assertNull(result);
+	}
+
+	@Test
+	public void shouldNotSumBecauseOfNullSecondParam() {
+		// given
+		final Integer first = 2;
+		final Integer second = null;
+
+		// when
+		Integer result = myServiceImpl.sum(first, second);
+
+		// then
+		assertNull(result);
+	}
+
+	@Test
+	public void shouldNotSumBecauseOfBothParamsNull() {
+		// given
+		final Integer first = null;
+		final Integer second = null;
 
 		// when
 		Integer result = myServiceImpl.sum(first, second);
