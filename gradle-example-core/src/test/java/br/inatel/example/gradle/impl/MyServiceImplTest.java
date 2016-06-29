@@ -1,6 +1,7 @@
 package br.inatel.example.gradle.impl;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,6 +42,19 @@ public class MyServiceImplTest {
 
 		// then
 		assertEquals(expected, result);
+	}
+
+	@Test
+	public void shouldNotSumBecauseOfNullParam() {
+		// given
+		final Integer first = null;
+		final Integer second = 3;
+
+		// when
+		Integer result = myServiceImpl.sum(first, second);
+
+		// then
+		assertNull(result);
 	}
 
 }

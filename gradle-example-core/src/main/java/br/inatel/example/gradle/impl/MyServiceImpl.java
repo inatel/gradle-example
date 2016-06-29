@@ -19,7 +19,10 @@ public class MyServiceImpl implements MyService {
 	 * @see MyService#sum(int, int)
 	 */
 	@Override
-	public int sum(int a, int b) {
+	public Integer sum(Integer a, Integer b) {
+		if (a == null || b == null) {
+			return null;
+		}
 		return a + b;
 	}
 

@@ -32,6 +32,6 @@ public interface MyService {
 	@GET
 	@Path("/sum")
 	@Produces(MediaType.APPLICATION_JSON)
-	int sum(@QueryParam("a") int a, @QueryParam("b") int b);
+	Integer sum(@QueryParam("a") Integer a, @QueryParam("b") Integer b);
 
 }
